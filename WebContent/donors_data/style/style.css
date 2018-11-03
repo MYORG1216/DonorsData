@@ -1,0 +1,40 @@
+.tile {
+	margin-left: 43% !important;
+	margin-top: 20% !important; 
+} 
+
+.scroll {
+	border: 2px dotted #333;
+    padding: 5px;
+    margin-top: 18.8%;
+}
+
+.customize {
+    color: white;
+    background-color: #8A0707;
+    border: 3px solid white;
+} 
+
+.title .sapMTitle {
+	color: red !important;
+}
+
+.sapMMessagePageDescription {
+	display: none !important;
+} 
+
+.sapUiFormResGridCont {
+	margin-top: 6% !important;
+}
+
+.bar .sapMBarContainer {
+	background: white !important;
+}
+
+.page .sapMBar {
+	background-color: white !important; 
+}
+
+.page .sapMPageEnableScrolling {
+	margin-top: -3% !important;
+}

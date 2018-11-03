@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+    <link type="text/css" rel="stylesheet" href="donors_data/style/style.css">
+    <script src="https://sapui5.hana.ondemand.com/1.52.18/resources/sap-ui-core.js" 
+    		id="sap-ui-bootstrap" 
+    		data-sap-ui-libs="sap.m, sap.ui.layout" 
+    		data-sap-ui-theme="sap_belize" 
+    		data-sap-ui-xx-bindingSyntax="complex" 
+    		data-sap-ui-resourceroots='{"Donation":"./"}' 
+    		data-sap-ui-preload="async">
+    </script>
+    <!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+    <script>
+        sap.ui.getCore().attachInit(function() {
+                debugger; 
+                new sap.m.Shell({
+                    app: new sap.ui.core.ComponentContainer({
+                        name: "Donation"
+                    })
+                }).placeAt("content");
+            }),
+
+            sap.ui.core.Control.extend('scroll', {
+                metadata: {
+                    properties: {
+                        text: {
+                            type: 'string',
+                            defaultValue: 'Example'
+                        },
+                        width: {
+                            type: 'sap.ui.core.CSSSize',
+                            defaultValue: '100%'
+                        },
+                        scrolldelay: {
+                            type: 'integer',
+                            defaultValue: 100
+                        }
+                    }
+                },
+                renderer: function(oRm, oCtrl) {
+                    oRm.write('<div style="width:' + oCtrl.getWidth() + '" ');
+                    oRm.writeControlData(oCtrl);
+                    oRm.addClass("scroll");
+                    oRm.writeClasses();
+                    oRm.write('>');
+                    oRm.write('<marquee scrolldelay="' + oCtrl.getScrolldelay() + '">' + oCtrl.getText() + '</marquee>');
+                    oRm.write('</div>');
+                }
+            });
+    </script>
+
+</head>
+
+<body class="sapUiBody" role="application">
+    <div id="content"></div>
+</body>
+
+</html>

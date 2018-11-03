@@ -1,0 +1,33 @@
+{
+    "data": {
+        "DonorsList": []
+        },
+        "groups": [{
+                "opt": "B+ve"
+            }, {
+                "opt": "B-ve"
+            }, {
+                "opt": "AB+ve"
+            }, {
+                "opt": "AB-ve"
+            }, {
+                "opt": "O+ve"
+            }, {
+                "opt": "O-ve"
+            }], 
+           "ColData":[   
+            {  
+               "key":"Ddate",
+               "value":"Date"
+            },
+            {  
+               "key":"Comment",
+               "value":"Comment"
+            } 
+         ],
+        "count": 0, 
+      "SelectedDonor": {},
+      "tmp": {},
+      "flag": false,
+      "addFlag": true
+}
